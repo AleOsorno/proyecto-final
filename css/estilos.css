@@ -45,7 +45,7 @@ body{
 .contenido_menu{
     position: fixed;
     display: flex;
-    flex-direction: column;
+    flex-direction:column;
     justify-content: space-between;
     width: 250px;
     height: 940px;
