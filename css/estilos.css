@@ -24,6 +24,12 @@ body{
 /*barra responsiva en horizontal*/
 
 @media (max-width: 1700px){
+
+    header{
+        position: fixed;
+        width: 100%;
+    }
+
     .menu{
         position: fixed;
         width: 50px;
