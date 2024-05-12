@@ -4,7 +4,9 @@
     --color-texto-menu: rgb(134,136,144);
     --color-menu-hover: rgb(238,238,238);
     --color-menu-hover-texto: rgb(0,0,0);
-    --color-linea: rgb(241,241,241)
+    --color-linea: rgb(241,241,241);
+    --color-icono: rgb(0,0,0);
+    --color-icono-texto: rgb(255,255,255);
 }
 
 *{
@@ -19,9 +21,29 @@ body{
     background-color: blanchedalmond;
 }
 
+/*Icono menu*/
+
+.menu{
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    font-size: 30px;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    cursor: pointer;
+    background-color: var(--color-icono);
+    color: var(--color-icono-texto);
+    right: 15px;
+    top: 15px;
+    z-index: 100;
+}
+
 /*Barra despegable*/
 
 .contenido_menu{
+    position: fixed;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -30,7 +52,8 @@ body{
     overflow: hidden;/*ocultar elementos al recorrer la barra*/
     padding: 20px 15px;
     background-color: var(--color-barra-lateral);/*llamado de variable*/
-    transition: width 0.5s ease;/*mejor transicion al recorrer la barra*/
+    transition: width 0.5s ease, left 0.5s ease;/*mejor transicion al recorrer la barra*/
+    z-index: 50;
 }
 
 .mini-barra-lateral{
@@ -107,11 +130,43 @@ body{
     background-color: var(--color-linea);
 }
 
+/*texto*/
+
+#inicio{
+    background-color: var(--color-menu-hover);
+    color: var(--color-menu-hover-texto);
+}
+
+main{
+    margin-left: 250px;
+    padding: 20px;
+    transition: margin-left 0.5s ease;
+}
+
+main.min-main{
+    margin-left: 80px;
+}
+
 /*barra responsiva en horizontal*/
 
 @media (max-width: 600px){
     .contenido_menu{
-        position: absolute;
+        position: fixed;
         left: -250px;
+    }
+    .max-barra-lateral{
+        left: 0;
+    }
+    .menu{
+        display: flex;
+    }
+    .menu ion-icon:nth-child(2){/*Accedemos al segundo icono*/
+        display: none;
+    }
+    main{
+        margin-left: 0;
+    }
+    main.min-main{
+        margin-left: 0;
     }
 }
