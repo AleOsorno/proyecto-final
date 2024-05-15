@@ -1,7 +1,8 @@
 :root{/*creación de variables para distintos colores de la página*/
     --color-barra-lateral: rgb(255,255,255);
     --color-texto: rgb(0,0,0);
-    --color-texto-menu: rgb(134,136,144);
+    --color-texto-menu: rgb(138, 136, 136);
+    --color-texto-menu2: rgb(255,255,255); 
     --color-menu-hover: rgb(238,238,238);
     --color-menu-hover-texto: rgb(0,0,0);
     --color-linea: rgb(241,241,241);
@@ -30,6 +31,10 @@ body{
         width: 100%;
     }
 
+    header:hover{
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    }
+
     .menu{
         position: fixed;
         width: 50px;
@@ -52,7 +57,6 @@ body{
         height: 86px;
         overflow: hidden;/*ocultar elementos al recorrer la barra*/
         padding: 20px 15px;
-        background-color: var(--color-barra-lateral);/*llamado de variable*/
         transition: width 0.5s ease, left 0.5s ease;/*mejor transicion al recorrer la barra*/
         z-index: 50;
     }
@@ -65,6 +69,7 @@ body{
     }
     
     .contenido_menu .nombre_pagina{/*nombre de la página*/
+        color: var(--color-texto-menu2);
         width: 100%;
         height: 45px;
         display: flex;
@@ -99,14 +104,14 @@ body{
     }
     
     .contenido_menu .navegacion a{
+        margin-right: 10px;
         width: 100%;
         height: 45px;
         display: flex;
         align-items: center;
         text-decoration: none;
         border-radius: 10px;
-        background-color: var(--color-barra-lateral);
-        color: var(--color-texto-menu);
+        color: var(--color-texto-menu2);
         padding-right: 6px;
     }
     
@@ -194,6 +199,7 @@ body{
     }
     
     .contenido_menu .nombre_pagina{/*nombre de la página*/
+        color: var(--color-texto);
         width: 100%;
         height: 45px;
         display: flex;
@@ -301,3 +307,13 @@ body{
 }
 
 /*--------------------------------------------------------------------------------------------------------*/
+
+.imagen{
+    height: 300px;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
