@@ -314,12 +314,26 @@ body{
 
 /*--------------------------------------------------------------------------------------------------------*/
 
-.imagen{
-    height: 300px;
+.encabezado{
+    background-image: url(network-3357642_1920.jpg);
+    height: 520px;
     background-size: cover;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     color: white;
+}
+
+.encabezado p{
+    color: white;
+    font-size: 30px;
+    font-family: "Lalezar", system-ui;
+}
+
+.encabezado h1{
+    color: white;
+    font-size: 50px;
+    padding: 20px;
+    font-family: "Secular One", sans-serif;
 }
