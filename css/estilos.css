@@ -203,6 +203,7 @@ body{
     .contenido_menu span.oculto{
         opacity: 0;
     }
+
     nav > ul{ /*EL SIGNO DE MAYOR QUE ES COMO DECIR QUE LA PROPIEDAD SE APLIQUE DAL UL DESPUES DEL NAV*/
         height: 100%;
         display: flex;
@@ -223,7 +224,7 @@ body{
     }
     
     .contenido_menu .nombre_pagina span{
-        color: var(--color-texto);
+        opacity: 0;
         margin-left: 5px;
         font-size: 19px;
     }
