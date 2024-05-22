@@ -19,7 +19,7 @@
 body{
     height: 100vh;
     width: 100%;
-    background-color: blanchedalmond;
+    background-color: rgb(255, 255, 255);
 }
 
 /*barra responsiva en horizontal*/
@@ -336,4 +336,53 @@ body{
     font-size: 50px;
     padding: 20px;
     font-family: "Secular One", sans-serif;
+}
+
+section.s1{
+    background-color: rgb(0, 119, 255);
+    height: 70px;
+    width: 100%;
+    color: white;
+    text-align: center;
+    padding-top: 23px;
+    font-size: 18px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+main{
+    background-color: antiquewhite;
+    height: 320px;
+}
+
+main img.im1{
+    width: 420px;
+    height: 250px;
+    float: left;
+    padding-right: 30px;
+}
+
+main h2, p{
+    margin-bottom: 20px;
+}
+
+main.m2{
+    background-color: rgb(209, 209, 209);
+    height: 320px;
+}
+
+main.m2 img.im2{
+    width: 420px;
+    height: 250px;
+    float: right;
+    padding-left: 30px;
+}
+
+main.m2 h2, p{
+    margin-bottom: 20px;
+}
+
+footer{
+    justify-content: center;
+    text-align: center;
+    padding: 30px;
 }
