@@ -31,10 +31,6 @@ body{
         width: 100%;
     }
 
-    header:hover{
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-    }
-
     .menu{
         position: fixed;
         width: 50px;
@@ -54,7 +50,7 @@ body{
     
     .contenido_menu{
         width: 100%;
-        height: 86px;
+        height: 580px;
         overflow: hidden;/*ocultar elementos al recorrer la barra*/
         padding: 20px 15px;
         transition: width 0.5s ease, left 0.5s ease;/*mejor transicion al recorrer la barra*/
@@ -93,8 +89,6 @@ body{
     .contenido_menu .navegacion{
         margin-left: 250px;
         height: 100%;
-        overflow-y: auto;/*agrega una barra para subir o bajar en caso de que no haya mucho espacio*/
-        overflow-x: hidden;
     }
     
     .contenido_menu .navegacion li{
@@ -129,11 +123,89 @@ body{
         opacity: 0;
     }
     
-    nav > ul{ /*EL SIGNO DE MAYOR QUE ES COMO DECIR QUE LA PROPIEDAD SE APLIQUE DAL UL DESPUES DEL NAV*/
+    nav {
+        height: 100%;
+    }
+    
+    nav > ul {
         height: 100%;
         display: flex;
     }
     
+    nav ul li {
+        height: 100%;
+        list-style: none;
+        position: relative;
+    }
+    
+    nav > ul > li > a {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        color: rgb(255, 255, 255);
+        align-items: center;
+        transition: all 300ms ease;
+    }
+    
+    nav > ul > li > a:hover {
+        transform: scale(1.1);
+        background-color: rgb(255, 255, 255);
+        box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
+    }
+    
+    nav ul li ul.submenu {
+        width: 200px;
+        display: flex;
+        flex-direction: column;
+        background-color: rgb(0, 72, 255);
+        position: absolute;
+        top: 90px;
+        left: -4px;
+        padding: 14px 0px 0px 0px;
+        visibility: hidden;
+        opacity: 0;
+        box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
+        z-index: 10;
+        transition: all 300ms;
+    }
+    
+    nav ul li:hover ul.submenu {
+        visibility: visible;
+        opacity: 1;
+        top: 70px;
+    }
+    
+    nav ul li ul.submenu:before {
+        content: '';
+        width: 0;
+        height: 0;
+        border-left: 12px solid transparent;
+        border-right: 12px solid transparent;
+        border-bottom: 12px solid white;
+        position: absolute;
+        top: -12px;
+        left: 20px;   
+    }
+    
+    nav ul li ul.submenu li a {
+        display: block;
+        color: rgb(255, 255, 255);
+        padding: 6px;
+        padding-left: 14px;
+        margin-top: 10px;
+        font-size: 14px;
+        text-transform: uppercase;
+        transition: all 300ms;
+    }
+    
+    nav ul li ul.submenu li a:hover {
+        background-color: rgb(0, 213, 255);
+        color: black;
+        transform: scale(1.1);
+        padding-left: 30px;
+        font-size: 14px;
+        box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
+    }
     /*texto*/
     
     #inicio{
