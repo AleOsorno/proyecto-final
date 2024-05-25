@@ -1,7 +1,8 @@
 :root{/*creación de variables para distintos colores de la página*/
     --color-barra-lateral: rgb(255,255,255);
     --color-texto: rgb(0,0,0);
-    --color-texto-menu: rgb(134,136,144);
+    --color-texto-menu: rgb(138, 136, 136);
+    --color-texto-menu2: rgb(255,255,255); 
     --color-menu-hover: rgb(238,238,238);
     --color-menu-hover-texto: rgb(0,0,0);
     --color-linea: rgb(241,241,241);
@@ -18,16 +19,20 @@
 body{
     height: 100vh;
     width: 100%;
-    background-color: blanchedalmond;
+    background-color: rgb(255, 255, 255);
 }
 
 /*barra responsiva en horizontal*/
 
-@media (max-width: 1700px){
+@media (max-width: 1900px){
 
     header{
         position: fixed;
         width: 100%;
+    }
+
+    header:hover{
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
     }
 
     .menu{
@@ -52,7 +57,6 @@ body{
         height: 86px;
         overflow: hidden;/*ocultar elementos al recorrer la barra*/
         padding: 20px 15px;
-        background-color: var(--color-barra-lateral);/*llamado de variable*/
         transition: width 0.5s ease, left 0.5s ease;/*mejor transicion al recorrer la barra*/
         z-index: 50;
     }
@@ -65,6 +69,7 @@ body{
     }
     
     .contenido_menu .nombre_pagina{/*nombre de la página*/
+        color: var(--color-texto-menu2);
         width: 100%;
         height: 45px;
         display: flex;
@@ -99,14 +104,14 @@ body{
     }
     
     .contenido_menu .navegacion a{
+        margin-right: 10px;
         width: 100%;
         height: 45px;
         display: flex;
         align-items: center;
         text-decoration: none;
         border-radius: 10px;
-        background-color: var(--color-barra-lateral);
-        color: var(--color-texto-menu);
+        color: var(--color-texto-menu2);
         padding-right: 6px;
     }
     
@@ -141,6 +146,13 @@ body{
         transition: margin-left 0.5s ease;
     }
 }
+
+
+
+
+
+
+
 
 @media (max-width: 780px){
     /*Icono menu*/
@@ -181,7 +193,6 @@ body{
     .mini-barra-lateral{
         width: 80px;
     }
-    
     .contenido_menu span{
         font-size: 18px;
         text-align: left;
@@ -192,7 +203,13 @@ body{
     .contenido_menu span.oculto{
         opacity: 0;
     }
-    
+
+    nav > ul{ /*EL SIGNO DE MAYOR QUE ES COMO DECIR QUE LA PROPIEDAD SE APLIQUE DAL UL DESPUES DEL NAV*/
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
     .contenido_menu .nombre_pagina{/*nombre de la página*/
         width: 100%;
         height: 45px;
@@ -207,14 +224,9 @@ body{
     }
     
     .contenido_menu .nombre_pagina span{
+        opacity: 0;
         margin-left: 5px;
         font-size: 19px;
-    }
-
-    nav > ul{ /*EL SIGNO DE MAYOR QUE ES COMO DECIR QUE LA PROPIEDAD SE APLIQUE DAL UL DESPUES DEL NAV*/
-        height: 100%;
-        display: flex;
-        flex-direction: column;
     }
     
     /*Menu de navegacion*/
@@ -301,3 +313,76 @@ body{
 }
 
 /*--------------------------------------------------------------------------------------------------------*/
+
+.encabezado{
+    background-image: url(network-3357642_1920.jpg);
+    height: 520px;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.encabezado p{
+    color: white;
+    font-size: 30px;
+    font-family: "Lalezar", system-ui;
+}
+
+.encabezado h1{
+    color: white;
+    font-size: 50px;
+    padding: 20px;
+    font-family: "Secular One", sans-serif;
+}
+
+section.s1{
+    background-color: rgb(0, 119, 255);
+    height: 70px;
+    width: 100%;
+    color: white;
+    text-align: center;
+    padding-top: 23px;
+    font-size: 18px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+main{
+    background-color: antiquewhite;
+    height: 320px;
+}
+
+main img.im1{
+    width: 420px;
+    height: 250px;
+    float: left;
+    padding-right: 30px;
+}
+
+main h2, p{
+    margin-bottom: 20px;
+}
+
+main.m2{
+    background-color: rgb(209, 209, 209);
+    height: 320px;
+}
+
+main.m2 img.im2{
+    width: 420px;
+    height: 250px;
+    float: right;
+    padding-left: 30px;
+}
+
+main.m2 h2, p{
+    margin-bottom: 20px;
+}
+
+footer{
+    justify-content: center;
+    text-align: center;
+    padding: 30px;
+}
