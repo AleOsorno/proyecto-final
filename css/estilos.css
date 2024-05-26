@@ -1,13 +1,6 @@
 :root{/*creación de variables para distintos colores de la página*/
-    --color-barra-lateral: rgb(255,255,255);
-    --color-texto: rgb(0,0,0);
-    --color-texto-menu: rgb(138, 136, 136);
-    --color-texto-menu2: rgb(255,255,255); 
     --color-menu-hover: rgb(238,238,238);
     --color-menu-hover-texto: rgb(0,0,0);
-    --color-linea: rgb(241,241,241);
-    --color-icono: rgb(0,0,0);
-    --color-icono-texto: rgb(255,255,255);
 }
 
 *{
@@ -24,159 +17,118 @@ body{
 
 /*barra responsiva en horizontal*/
 
-@media (max-width: 1900px){
+@media (max-width: 3000px){
 
     header{
-        position: fixed;
+        background-color: black;
+        text-align: center;
+        padding: 26px 0px;
         width: 100%;
+        height: 125px;
     }
 
-    .menu{
-        position: fixed;
+    img.inicios{
         width: 50px;
-        height: 50px;
-        font-size: 30px;
-        display: none;
-        justify-content: center;
-        align-items: center;
-        border-radius: 50%;
-        cursor: pointer;
-        background-color: var(--color-icono);
-        color: var(--color-icono-texto);
-        right: 15px;
-        top: 15px;
-        z-index: 100;
+    }
+    
+    nav a{
+        text-decoration: none;
+        display: inline-block;
+        color: white;
+        margin: 0px 2px;
+        border-radius: 30px;
+    }
+
+    nav a.posicion{
+        margin: 20px 10px;
+    }
+
+    nav a.posicion span{
+        padding-left: 10px;
+        font-size: 18px;
+    }
+    
+    nav a:hover{
+        background-color: white;
+        color: black;
     }
     
     .contenido_menu{
-        width: 100%;
-        height: 580px;
-        overflow: hidden;/*ocultar elementos al recorrer la barra*/
-        padding: 20px 15px;
-        transition: width 0.5s ease, left 0.5s ease;/*mejor transicion al recorrer la barra*/
-        z-index: 50;
+       grid-template-columns: 1fr auto;
+       align-items: center;
+       background: rgb(0, 0, 0);
+       font-family: sans-serif;
+       position:fixed;
+       top:0;
+       height: 60px;
+       width: 100%;
     }
     
-    .contenido_menu span{
-        font-size: 18px;
-        text-align: left;
-        opacity: 1;/*hacer visible el texto*/
-        transition: opacity 0.5s ease;
+    .menu{
+        max-width: 1200px;
+        margin-left: 15px;
+        height: 100%;
+        position: relative;
+        z-index: 2;
     }
     
-    .contenido_menu .nombre_pagina{/*nombre de la página*/
-        color: var(--color-texto-menu2);
-        width: 100%;
-        height: 45px;
-        display: flex;
-        position: fixed;
-        align-items: center;
-    }
-    
-    .contenido_menu .nombre_pagina img{
-        min-width: 50px;
-        height: 42px;
-        cursor: pointer;
-    }
-    
-    .contenido_menu .nombre_pagina span{
-        margin-left: 5px;
-        font-size: 19px;
-    }
-    
-    /*Menu de navegacion*/
-    
-    .contenido_menu .navegacion{
-        margin-left: 250px;
+    nav{
         height: 100%;
     }
     
-    .contenido_menu .navegacion li{
-        list-style: none;
-        display: flex;
-        margin-bottom: 5px;
-    }
-    
-    .contenido_menu .navegacion a{
-        margin-right: 10px;
-        width: 100%;
-        height: 45px;
-        display: flex;
-        align-items: center;
-        text-decoration: none;
-        border-radius: 10px;
-        color: var(--color-texto-menu2);
-        padding-right: 6px;
-    }
-    
-    .contenido_menu .navegacion a:hover{
-        background-color: var(--color-menu-hover);
-        color: var(--color-menu-hover-texto);
-    }
-    
-    .contenido_menu .navegacion ion-icon{
-        min-width: 50px;
-        font-size: 20px;
-    }
-    
-    .contenido_menu hr{
-        opacity: 0;
-    }
-    
-    nav {
-        height: 100%;
-    }
-    
-    nav > ul {
+    nav > ul{ /*EL SIGNO DE MAYOR QUE ES COMO DECIR QUE LA PROPIEDAD SE APLIQUE DAL UL DESPUES DEL NAV*/
         height: 100%;
         display: flex;
     }
     
-    nav ul li {
+    nav  ul  li{
         height: 100%;
         list-style: none;
         position: relative;
     }
     
-    nav > ul > li > a {
+    nav > ul > li > a{
         width: 100%;
         height: 100%;
         display: flex;
         color: rgb(255, 255, 255);
-        align-items: center;
+        align-items: center; /*ALINEAR AL CENTRO TODO*/
+        padding: 14px; /*ESPACIADO*/
+        text-transform: uppercase; /*TRANSFORMAR EN MAYUSCULAS*/
+        font-size: 14px; /*TAMAÑO DE LETRA*/
         transition: all 300ms ease;
     }
     
-    nav > ul > li > a:hover {
-        transform: scale(1.1);
+    nav > ul > li > a:hover{/*EVENTO DE NOMBRE HOVER QUE SE REFIERE A CUANDO SE INTERACTUA CON EL ELEMENTO CORRESPONDIENTE*/
+        transform: scale(1.1); /*TRANSFORMARSE EN UNA ESCALA DE 1.1*/
         background-color: rgb(255, 255, 255);
-        box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
+        box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);/*SOMBRA DE FONDO CUANDO INTERACTUAMOS CON EL ELEMENTO*/
     }
     
-    nav ul li ul.submenu {
+    nav ul li ul{
         width: 200px;
         display: flex;
-        flex-direction: column;
+        flex-direction: column;/*QUE EL SUBMENU VAYA EN COLUMNA*/
         background-color: rgb(0, 72, 255);
-        position: absolute;
+        position: absolute; /*posicion absoluta*/
         top: 90px;
         left: -4px;
         padding: 14px 0px 0px 0px;
-        visibility: hidden;
+        visibility: hidden; /*OCULTO*/
         opacity: 0;
         box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
         z-index: 10;
-        transition: all 300ms;
+        transition: all 300ms
     }
     
-    nav ul li:hover ul.submenu {
+    nav ul li:hover ul{
         visibility: visible;
         opacity: 1;
         top: 70px;
     }
     
-    nav ul li ul.submenu:before {
-        content: '';
+    nav ul li ul:before{
+        content: white;
         width: 0;
         height: 0;
         border-left: 12px solid transparent;
@@ -187,7 +139,7 @@ body{
         left: 20px;   
     }
     
-    nav ul li ul.submenu li a {
+    nav ul li ul li a{
         display: block;
         color: rgb(255, 255, 255);
         padding: 6px;
@@ -198,7 +150,7 @@ body{
         transition: all 300ms;
     }
     
-    nav ul li ul.submenu li a:hover {
+    nav ul li ul li a:hover{
         background-color: rgb(0, 213, 255);
         color: black;
         transform: scale(1.1);
@@ -206,6 +158,7 @@ body{
         font-size: 14px;
         box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
     }
+
     /*texto*/
     
     #inicio{
@@ -386,9 +339,10 @@ body{
 
 /*--------------------------------------------------------------------------------------------------------*/
 
-.encabezado{
-    background-image: url(network-3357642_1920.jpg);
-    height: 520px;
+/*CARRUSEL*/
+
+.centrado{
+    height: 1000px;
     background-size: cover;
     display: flex;
     flex-direction: column;
@@ -397,18 +351,64 @@ body{
     color: white;
 }
 
-.encabezado p{
-    color: white;
-    font-size: 30px;
-    font-family: "Lalezar", system-ui;
+.carrusel{
+    position: relative;
+    width: 500px;
+    height: 300px;
+    background-color: white;
+    box-shadow: 0 8px 32px 0 black;
+    border-radius: 15px;
+    overflow: hidden;
 }
 
-.encabezado h1{
-    color: white;
-    font-size: 50px;
-    padding: 20px;
-    font-family: "Secular One", sans-serif;
+.carruseles{
+    width: 400%;/*depende del num de imagenes*/
+    height: 100%;
+    display: flex;
 }
+
+.slider{
+    width: calc(100%/4);/*carrusel para 4 imagenes*/
+    height: 100%;
+}
+
+.slider img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;/*que las imagenes no pierdan su calidad*/
+    border-radius: 15px;
+}
+
+.bl,.br{
+    display: flex;
+    position: absolute;
+    top: 50%;
+    font-size: 1.5rem;
+    background-color: transparent;
+    border-radius: 50%;
+    padding: 5px;
+    font-weight: 600;
+    cursor: pointer;
+    color: white;
+    transform: translate(0,-50%);
+    transition: 0.5s ease;
+    user-select: none;
+}
+
+.bl{
+    left: 10px;
+}
+
+.br{
+    right: 10px;
+}
+
+.bl:hover,.br:hover{
+    background-color: black;
+    color: white;
+}
+
+/*-----------------------------------------------------*/
 
 section.s1{
     background-color: rgb(0, 119, 255);

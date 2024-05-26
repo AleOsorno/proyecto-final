@@ -29,3 +29,48 @@ logo.addEventListener("click",()=>{//Al presionar el icono hara las siguientes a
         span.classList.toggle("oculto");
     });
 });
+
+//-----------------------------------------------------------------------------------------------------
+
+/*Carrusel de imagenes*/
+
+const botonIzq = document.querySelector(".bl"),//variables 
+        botonDer = document.querySelector(".br"),
+        slideer = document.querySelector("#slider1"),
+        sliderSection = document.querySelectorAll(".slider");
+
+botonIzq.addEventListener("click", e=> moverIzq())//espera a que se haga click en el boton izquierdo para activar la funcion
+botonDer.addEventListener("click", e=> moverDer())//espera a que se haga click en el boton derecho para activar la funcion        
+
+setInterval(()=>{//ejecutar infinitamente el carrusel cada 5 segundos.
+    moverDer();
+},5000);
+
+let op=0;
+let counter= 0;
+
+function moverDer(){
+    if(counter>=sliderSection.length-1){//si counter es mayor a las imagenes del carrusel, regresara a la primera imagen
+        op=0;
+        counter=0;
+        slideer.style.transform = `translate(-${op}%)`;
+    }else{//Si no, movera el carrusel de forma normal
+        counter++;
+        op = op + 25.0;
+        slideer.style.transform = `translate(-${op}%)`;//mover la imagen con la variable op, se agrea de esa forma para tomar en cuenta el valor de la variable
+        slideer.style.transition = "all ease 0.6s";//agregar una transición de 0.6 segundos
+    }
+}
+
+function moverIzq(){
+    counter--;
+    if(counter < 0){
+        counter = sliderSection.length-1;
+        op= 75.0;
+        slideer.style.transform = `translate(-${op}%)`;//mover la imagen con la variable op, se agrea de esa forma para tomar en cuenta el valor de la variable
+    }else{
+        op = op - 25.0;
+        slideer.style.transform = `translate(-${op}%)`;//mover la imagen con la variable op, se agrea de esa forma para tomar en cuenta el valor de la variable
+        slideer.style.transition = "all ease 0.6s";
+    }
+}
