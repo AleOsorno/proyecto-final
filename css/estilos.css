@@ -1,3 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap'); /*tipografia SPACE MONO*/
+@import url('https://fonts.googleapis.com/css2?family=Lilita+One&display=swap');/*Lilita one*/
+@import url('https://fonts.googleapis.com/css2?family=Patua+One&display=swap');/*Patua One*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');/*roboto mono*/
+
 :root{/*creación de variables para distintos colores de la página*/
     --color-menu-hover: rgb(238,238,238);
     --color-menu-hover-texto: rgb(0,0,0);
@@ -111,7 +116,7 @@ body{
         width: 200px;
         display: flex;
         flex-direction: column;/*QUE EL SUBMENU VAYA EN COLUMNA*/
-        background-color: rgb(0, 72, 255);
+        background-color: rgb(0, 162, 255);
         position: absolute; /*posicion absoluta*/
         top: 90px;
         left: -4px;
@@ -153,7 +158,7 @@ body{
     }
     
     nav ul li ul li a:hover{
-        background-color: rgb(0, 213, 255);
+        background-color: rgb(255, 166, 0);
         color: black;
         transform: scale(1.1);
         padding-left: 30px;
@@ -168,10 +173,6 @@ body{
         color: var(--color-menu-hover-texto);
     }
     
-    main{
-        padding: 20px;
-        transition: margin-left 0.5s ease;
-    }
 }
 
 /*--------------------------------------------------------------------------------------------------------*/
@@ -249,45 +250,220 @@ body{
 
 section.s1{
     background-color: rgb(0, 119, 255);
+    font-family: "Space Mono", monospace;
+    font-weight: 700;
+    font-style: normal;
     height: 70px;
     width: 100%;
     color: white;
     text-align: center;
     padding-top: 23px;
     font-size: 18px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-main{
-    background-color: rgb(236, 236, 236);
-    height: 320px;
+.set{
+    height: 1200px;
+    width: 100%;
+    background-color: rgb(233, 232, 232);
 }
 
-main img.im1{
-    width: 420px;
-    height: 250px;
+.set2{
+    width: 100%;
+    height: 100%;
+}
+
+.separador{
+    height: 50%;
+    display: flex;
+    background-color: rgb(108, 165, 164);
+}
+
+.set .set2 .separador .imag{
+    width: 50%;
+    height: 100%;
+}
+
+.set .set2 .separador .imag img{
+    width: 100%;
+    height: 100%;
+}
+
+.set .set2 .separador .texto{
+    width: 50%;
+    height: 100%;
+}
+
+.set .set2 .separador .texto h1{
+    padding-top: 70px;
+    text-align: center;
+    font-size: 80px;
+    font-family: "Lilita One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.set .set2 .separador .texto p{
+    padding: 20px 60px;
+    padding-top: 120px;
+    text-align: center;
+    font-size: 24px;
+    font-family: "Patua One", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.set .set2 .separador .texto hr{
+    background-color: rgb(255, 153, 0);
+    height: 15px;
+    width: 40%;
+    border-radius: 15px;
+    border: 2px solid rgb(255, 153, 0);
+    margin: 0px 260px;
+}
+
+.separador2{
+    height: 50%;
+    display: flex;
+    background-color: rgb(210, 180, 140);
+}
+
+.set .set2 .separador2 .imag{
+    width: 50%;
+    height: 100%;
+}
+
+.set .set2 .separador2 .imag img{
+    width: 100%;
+    height: 100%;
+}
+
+.set .set2 .separador2 .texto{
+    width: 50%;
+    height: 100%;
+}
+
+.set .set2 .separador2 .texto h1{
+    padding-top: 70px;
+    text-align: center;
+    font-size: 50px;
+    font-family: "Lilita One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.set .set2 .separador2 .texto p{
+    padding: 20px 60px;
+    padding-top: 120px;
+    text-align: center;
+    font-size: 24px;
+    font-family: "Patua One", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.set .set2 .separador2 .texto hr{
+    background-color: rgb(0, 140, 255);
+    height: 15px;
+    width: 40%;
+    border-radius: 15px;
+    border: 2px solid rgb(0, 140, 255);
+    margin: 0px 260px;
+}
+
+.extra{
+    height: 1000px;
+    width: 100%;
+    background-color: rgb(233, 232, 232);
+}
+
+.separador3{
+    height: 50%;
+}
+
+.extra .set2 .separador3 .texto h1{
+    padding-top: 70px;
+    text-align: center;
+    font-size: 50px;
+    font-family: "Lilita One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.extra .set2 .separador3 .texto p{
+    padding: 20px 60px;
+    padding-top: 50px;
+    text-align: center;
+    font-size: 24px;
+    font-family: "Patua One", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.extra .set2 .separador3 .texto ion-icon{
+    font-size: 80px;
+    margin-top: 50px;
+    margin-left: 260px;
+    border-radius: 15px;
+    padding: 3px;
+    transition: all 0.5s;
+}
+
+.extra .set2 .separador3 .texto ion-icon:hover{
+    background-color: black;
+    color: white;
+}
+
+.separador4{
+    height: 50%;
+    background-color: rgb(64, 87, 94);
+}
+
+.extra .set2 .separador4 .texto h1{
+    padding-top: 70px;
+    text-align: center;
+    font-size: 50px;
+    font-family: "Lilita One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: white;
+}
+
+.extra .set2 .separador4 .texto .anuncios {
+    padding-top: 30px;
+    display: flex;
+    height: 310px;
+}
+
+.extra .set2 .separador4 .texto .anuncios .gallery {
+    margin: 5px;
+    background-color: #FF4500;
     float: left;
-    padding-right: 30px;
-}
+    width: 180px;
+    box-shadow: 0 0 10px 5px rgb(0, 0, 0);
+    margin-left: 290px;
+    border-radius: 15px;
+    transition: all 0.5s;
+  }
 
-main h2, p{
-    margin-bottom: 20px;
+.extra .set2 .separador4 .texto .anuncios .gallery:hover {
+    background-color: rgb(241, 141, 18);
+    transform: scale(1.2);
 }
-
-main.m2{
-    background-color: rgb(209, 209, 209);
-    height: 320px;
+  
+.extra .set2 .separador4 .texto .anuncios .gallery img {
+    width: 100%;
+    height: 190px;
+    border-radius: 15px 15px 0px 0px;
 }
-
-main.m2 img.im2{
-    width: 420px;
-    height: 250px;
-    float: right;
-    padding-left: 30px;
-}
-
-main.m2 h2, p{
-    margin-bottom: 20px;
+  
+.extra .set2 .separador4 .texto .anuncios .gallery .desc {
+    padding: 15px;
+    font-family: "Roboto Mono", monospace;
+    font-optical-sizing: auto;
+    font-weight: bold;
+    font-style: normal;
+    text-align: center;
+    color: white;
 }
 
 footer{
