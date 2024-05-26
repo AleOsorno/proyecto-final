@@ -20,32 +20,32 @@ body{
 @media (max-width: 3000px){
 
     header{
-        background-color: black;
+        background-color: rgb(0, 0, 0);
         text-align: center;
-        padding: 26px 0px;
         width: 100%;
-        height: 125px;
+        height: 90px;
     }
 
     img.inicios{
         width: 50px;
+        border-radius: 30px;
     }
     
     nav a{
         text-decoration: none;
         display: inline-block;
         color: white;
-        margin: 0px 2px;
+        margin-top: 20px;
         border-radius: 30px;
     }
 
     nav a.posicion{
-        margin: 20px 10px;
+        margin: 20px 13.72px;
     }
 
     nav a.posicion span{
         padding-left: 10px;
-        font-size: 18px;
+        font-size: 16px;
     }
     
     nav a:hover{
@@ -58,10 +58,12 @@ body{
        align-items: center;
        background: rgb(0, 0, 0);
        font-family: sans-serif;
-       position:fixed;
+       position: fixed;
        top:0;
-       height: 60px;
+       padding-bottom: 30px;
+       height: 90px;
        width: 100%;
+       z-index: 1000;/*evitar sobreposición de cosas en la barra de navegación*/
     }
     
     .menu{
@@ -172,203 +174,37 @@ body{
     }
 }
 
-
-
-
-
-
-
-
-@media (max-width: 780px){
-    /*Icono menu*/
-
-    .menu{
-        position: fixed;
-        width: 50px;
-        height: 50px;
-        font-size: 30px;
-        display: none;
-        justify-content: center;
-        align-items: center;
-        border-radius: 50%;
-        cursor: pointer;
-        background-color: var(--color-icono);
-        color: var(--color-icono-texto);
-        right: 15px;
-        top: 15px;
-        z-index: 100;
-    }
-
-    /*Barra despegable*/
-    
-    .contenido_menu{
-        position: fixed;
-        display: flex;
-        flex-direction:column;
-        justify-content: space-between;
-        width: 250px;
-        height: 100%;
-        overflow: hidden;/*ocultar elementos al recorrer la barra*/
-        padding: 20px 15px;
-        background-color: var(--color-barra-lateral);/*llamado de variable*/
-        transition: width 0.5s ease, left 0.5s ease;/*mejor transicion al recorrer la barra*/
-        z-index: 50;
-    }
-    
-    .mini-barra-lateral{
-        width: 80px;
-    }
-    .contenido_menu span{
-        font-size: 18px;
-        text-align: left;
-        opacity: 1;/*hacer visible el texto*/
-        transition: opacity 0.5s ease;
-    }
-    
-    .contenido_menu span.oculto{
-        opacity: 0;
-    }
-
-    nav > ul{ /*EL SIGNO DE MAYOR QUE ES COMO DECIR QUE LA PROPIEDAD SE APLIQUE DAL UL DESPUES DEL NAV*/
-        height: 100%;
-        display: flex;
-        flex-direction: column;
-    }
-
-    .contenido_menu .nombre_pagina{/*nombre de la página*/
-        width: 100%;
-        height: 45px;
-        display: flex;
-        align-items: center;
-    }
-    
-    .contenido_menu .nombre_pagina img{
-        min-width: 50px;
-        height: 42px;
-        cursor: pointer;
-    }
-    
-    .contenido_menu .nombre_pagina span{
-        opacity: 0;
-        margin-left: 5px;
-        font-size: 19px;
-    }
-    
-    /*Menu de navegacion*/
-    
-    .contenido_menu .navegacion{
-        margin-top: 80px;
-        margin-left: 0px;
-        height: 100%;
-        overflow-y: auto;/*agrega una barra para subir o bajar en caso de que no haya mucho espacio*/
-        overflow-x: hidden;
-    }
-    
-    .contenido_menu .navegacion li{
-        list-style: none;
-        display: flex;
-        margin-bottom: 5px;
-    }
-    
-    .contenido_menu .navegacion a{
-        width: 100%;
-        height: 45px;
-        display: flex;
-        align-items: center;
-        text-decoration: none;
-        border-radius: 10px;
-        background-color: var(--color-barra-lateral);
-        color: var(--color-texto-menu);
-    }
-    
-    .contenido_menu .navegacion a:hover{
-        background-color: var(--color-menu-hover);
-        color: var(--color-menu-hover-texto);
-    }
-    
-    .contenido_menu .navegacion ion-icon{
-        min-width: 50px;
-        font-size: 20px;
-    }
-    
-    .contenido_menu hr{
-        width: 100%;
-        height: 1px;
-        background-color: var(--color-linea);
-    }
-    
-    /*texto*/
-    
-    #inicio{
-        background-color: var(--color-menu-hover);
-        color: var(--color-menu-hover-texto);
-    }
-    
-    main{
-        margin-left: 250px;
-        padding: 20px;
-        transition: margin-left 0.5s ease;
-    }
-    
-    main.min-main{
-        margin-left: 80px;
-    }
-}
-
-@media (max-width: 600px){
-    .contenido_menu{
-        position: fixed;
-        left: -250px;
-    }
-    .max-barra-lateral{
-        left: 0;
-    }
-    .menu{
-        display: flex;
-    }
-    .menu ion-icon:nth-child(2){/*Accedemos al segundo icono*/
-        display: none;
-    }
-    main{
-        margin-left: 0;
-    }
-    main.min-main{
-        margin-left: 0;
-    }
-}
-
 /*--------------------------------------------------------------------------------------------------------*/
 
 /*CARRUSEL*/
 
 .centrado{
-    height: 1000px;
+    height: 600px;
     background-size: cover;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: center;    
     align-items: center;
     color: white;
 }
 
 .carrusel{
     position: relative;
-    width: 500px;
-    height: 300px;
+    width: 100%;
+    height: 100%;
     background-color: white;
-    box-shadow: 0 8px 32px 0 black;
-    border-radius: 15px;
     overflow: hidden;
+    z-index: 1;/*evitar sobreposicion del carrusel con la barra de navegación"*/
 }
 
 .carruseles{
-    width: 400%;/*depende del num de imagenes*/
+    width: 500%;/*depende del num de imagenes*/
     height: 100%;
     display: flex;
 }
 
 .slider{
-    width: calc(100%/4);/*carrusel para 4 imagenes*/
+    width: calc(100%/5);/*carrusel para 4 imagenes*/
     height: 100%;
 }
 
@@ -376,7 +212,6 @@ body{
     width: 100%;
     height: 100%;
     object-fit: cover;/*que las imagenes no pierdan su calidad*/
-    border-radius: 15px;
 }
 
 .bl,.br{
@@ -410,6 +245,8 @@ body{
 
 /*-----------------------------------------------------*/
 
+/*INFO DE LA PAGINA PRINCIPAL*/
+
 section.s1{
     background-color: rgb(0, 119, 255);
     height: 70px;
@@ -422,7 +259,7 @@ section.s1{
 }
 
 main{
-    background-color: antiquewhite;
+    background-color: rgb(236, 236, 236);
     height: 320px;
 }
 
