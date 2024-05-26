@@ -7,125 +7,186 @@
         <link rel="stylesheet" href="css/estilos.css">
     </head>
     <body>
+
         <header>
-            <div class="menu">
-                <ion-icon name="menu-outline"></ion-icon>
-                <ion-icon name="close-circle-outline"></ion-icon>
-            </div>
             <div class="contenido_menu">
-                <div>
-                    <div class="nombre_pagina"><!--Aquí ira el ícono y nombre, por lo que todavia no usare una etiqueta nav-->
-                        <img id="logo" src="css/LOGO ATIT.jpg">
-                        <span>Academia de ATIT</span> <!--Nombre de la pagina-->
-                    </div>
+                <div class="menu">
+                    <nav>
+                        <ul>
+                            <li>
+                                <a id="inicio" href="#">
+                                <!--<ion-icon class="inicios" name="aperture-outline"></ion-icon>-->
+                                <img class="inicios" src="css/imgale/LOGO ATIT.jpg">
+                                </a>
+                            </li>
+                            <li>
+                                <a class="posicion" href="#">
+                                    <ion-icon name="book-outline"></ion-icon>
+                                    <span>Carreras</span>
+                                </a>
+                                <ul>
+                                    <li><a href="ITI.html">Ing. Tecnologías de la Información</a></li>
+                                    <li><a href="ITEM.html">Ing. Telemática</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a class="posicion" href="Personal.html">
+                                    <ion-icon name="person-outline"></ion-icon>
+                                    <span>Personal</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="posicion" href="Residencias.html">
+                                    <ion-icon name="mail-unread-outline"></ion-icon>
+                                    <span>Residencias</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="posicion" href="Proyectos.html">
+                                    <ion-icon name="location-outline"></ion-icon>
+                                    <span>Proyectos</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="posicion" href="Videos.html">
+                                    <ion-icon name="stop-circle-outline"></ion-icon>
+                                    <span>Videos</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="posicion" href="Indicadores.html">
+                                    <ion-icon name="checkmark-outline"></ion-icon>
+                                    <span>Indicadores</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="posicion" href="#">
+                                    <ion-icon name="easel-outline"></ion-icon>
+                                    <span>Interacción</span>
+                                </a>
+                                <ul>
+                                    <li><a href="Blog.html">Blog</a></li>
+                                    <li><a href="Contacto.html">Contacto</a></li>
+                                    <li><a href="Cuestionario.html">Cuestionario</a></li>
+                                    <li><a href="Chat.html">Chat</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a class="posicion" href="Galeria.html">
+                                    <ion-icon name="save-outline"></ion-icon>
+                                    <span>Galería</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="posicion" href="#">
+                                    <ion-icon name="construct-outline"></ion-icon>
+                                    <span>Ayuda</span>
+                                </a>
+                                <ul>
+                                    <li><a href="Preguntas.html">Preguntas</a></li>
+                                    <li><a href="Grupos.html">Grupos</a></li>
+                                    <li><a href="Redes.html">Redes</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </nav>
                 </div>
-                <nav class="navegacion">
-                    <ul>
-                        <li>
-                            <a id="inicio" href="#">
-                                <ion-icon name="aperture-outline"></ion-icon>
-                                <span>Inicio</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="Carreras.html">
-                                <ion-icon name="book-outline"></ion-icon>
-                                <span>Carreras</span>
-                            </a>
-                            <ul class="submenu">
-                                <li><a href="ITI.html">Ing. Tecnologías de la Información</a></li>
-                                <li><a href="ITEM.html">Ing. Telemática</a></li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="Personal.html">
-                                <ion-icon name="person-outline"></ion-icon>
-                                <span>Personal</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="Residencias.html">
-                                <ion-icon name="mail-unread-outline"></ion-icon>
-                                <span>Residencias</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="Proyectos.html">
-                                <ion-icon name="location-outline"></ion-icon>
-                                <span>Proyectos</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="Videos.html">
-                                <ion-icon name="stop-circle-outline"></ion-icon>
-                                <span>Videos</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="Indicadores.html">
-                                <ion-icon name="checkmark-outline"></ion-icon>
-                                <span>Indicadores</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="Interaccion.html">
-                                <ion-icon name="easel-outline"></ion-icon>
-                                <span>Interacción</span>
-                            </a>
-                            <ul class="submenu">
-                                <li><a href="#">Blog</a></li>
-                                <li><a href="#">Contacto</a></li>
-                                <li><a href="#">Cuestionario</a></li>
-                                <li><a href="#">Chat</a></li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="Galeria.html">
-                                <ion-icon name="save-outline"></ion-icon>
-                                <span>Galería</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="Ayuda.html">
-                                <ion-icon name="construct-outline"></ion-icon>
-                                <span>Ayuda</span>
-                            </a>
-                            <ul class="submenu">
-                                <li><a href="#">Preguntas frecuentes</a></li>
-                                <li><a href="#">Grupos de ayuda</a></li>
-                                <li><a href="#">Redes sociales</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </nav>
-                <hr>
             </div>
         </header>
 
-        <div class="encabezado" id="inicio">
-            <h1>Academia de Tecnologías de la Información y</h1>
-            <h1>Telemática</h1>
-        </div>
+        <article>
+            <div class="centrado">
+                <div class="carrusel">
+                    <div class="carruseles" id="slider1">
+                        <section class="slider">
+                            <img src="css/imgale/Blue Purple Futuristic Modern 3D Tech Company Business Presentation.png" alt="">
+                        </section>
+                        <section class="slider">
+                            <img src="css/imgale/carrusel1.png" alt="">
+                        </section>
+                        <section class="slider">
+                            <img src="css/imgale/carrusel2.png" alt="">
+                        </section>
+                        <section class="slider">
+                            <img src="css/imgale/carrusel3.png" alt="">
+                        </section>
+                        <section class="slider">
+                            <img src="css/imgale/carrusel4.png" alt="">
+                        </section>
+                    </div>
+                    <div class="bl"><ion-icon name="caret-back-outline"></ion-icon></div>
+                    <div class="br"><ion-icon name="caret-forward-outline"></ion-icon></div>
+                </div>
+            </div>
 
-        <section class="s1">
-            <p>Todo lo que debes saber acerca de la Academia de Tecologías de la Información y Telemática (ATIT).</p>
-        </section>
+            <section class="s1">
+                <p>Todo lo que debes saber acerca de la Academia de Tecologías de la Información y Telemática (ATIT).</p>
+            </section>
 
-        <main>
-            <img class="im1" src="css/img-inde2.png">
-            <h2>¿Qué es la academia de ATIT?</h2>
-            <p>Lorem ipsum dolor sit amet. Qui alias veritatis ut aliquid harum sit incidunt dicta a dolorem quis. Et omnis blanditiis est sapiente quia ut amet deserunt sit corporis porro ea inventore asperiores est odit eaque non dolores quia.</p>
-            <p>Ad doloribus quas est quia galisum vel veniam magnam in quasi similique ea reiciendis dolor sit consectetur consectetur est molestiae nobis. Et inventore veritatis est ipsa voluptatem et accusamus quod!</p>
-            <p>Ad doloribus quas est quia galisum vel veniam magnam in quasi similique ea reiciendis dolor sit consectetur consectetur est molestiae nobis. Et inventore veritatis est ipsa voluptatem et accusamus quod!</p>
-        </main>
-
-        <main class="m2">
-            <img class="im2" src="css/img-inde3.png">
-            <h2>Historia</h2>
-            <p>Lorem ipsum dolor sit amet. Qui alias veritatis ut aliquid harum sit incidunt dicta a dolorem quis. Et omnis blanditiis est sapiente quia ut amet deserunt sit corporis porro ea inventore asperiores est odit eaque non dolores quia</p>
-            <p>Ad doloribus quas est quia galisum vel veniam magnam in quasi similique ea reiciendis dolor sit consectetur consectetur est molestiae nobis. Et inventore veritatis est ipsa voluptatem et accusamus quod!</p>
-            <p>Qui earum animi est minus quia et velit illum quo ullam fugit 33 labore fuga id eligendi vero non earum distinctio? Aut Quis delectus sed voluptatum necessitatibus ea quia quae id tenetur dolorem.</p>
-        </main>
+            <div class="set">
+                <div class="set2">
+                    <div class="separador">
+                        <div class="imag">
+                            <img src="css/imgale/paperwork-5000691_1280.png">
+                        </div>
+                        <div class="texto">
+                            <h1>Introducción</h1>
+                            <p>Bienvenidos a la página de la Academia ATIT. Aquí mostramos nuestras actividades y experiencias en las carreras de Tecnologías de la Información y Telemática. Descubra cómo impulsamos la formación y el desarrollo en estos campos.</p>
+                            <hr>
+                        </div>
+                    </div>
+                    <div class="separador2">
+                        <div class="texto">
+                            <h1>¿Qué es la academia de ATIT?</h1>
+                            <p>La Academia ATIT organiza diversas actividades relacionadas con las carreras de ITI (Tecnologías de la Información) e ITEM (Telemática). Además, promueve el progreso de sus alumnos solicitando a la universidad equipo actualizado cada año, asegurando así un aprendizaje moderno y relevante.</p>
+                            <hr>
+                        </div>
+                        <div class="imag">
+                            <img src="css/imgale/laptop-2620118_1280.jpg">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="extra">
+                <div class="set2">
+                    <div class="separador3">
+                        <div class="texto">
+                            <h1>Aplicaciones y utilidades</h1>
+                            <p>Además de proporcionar información general sobre nuestras carreras, queremos ofrecerte la oportunidad de interactuar con nuestro personal si tienes más preguntas. Para ello, hemos añadido nuevas pestañas de interacción y ayuda que te serán útiles. Solo necesitas acercar el mouse a la barra de navegación para acceder a esta información.</p>
+                            <ion-icon name="map-outline"></ion-icon>
+                            <ion-icon name="globe-outline"></ion-icon>
+                            <ion-icon name="people-circle-outline"></ion-icon>
+                            <ion-icon name="eye-outline"></ion-icon>
+                        </div>
+                    </div>
+                    <div class="separador4">
+                        <div class="texto">
+                            <h1>Noticias y/o anuncios</h1>
+                            <div class="anuncios">
+                                <div class="gallery">
+                                    <a target="_blank" href="https://www.facebook.com/photo?fbid=914785550447240&set=a.520804703178662">
+                                      <img src="css/imgale/anuncios1.jpg" alt="anuncios" width="600" height="400">
+                                    </a>
+                                    <div class="desc">Visita al IPICYT</div>
+                                </div>
+                                <div class="gallery">
+                                    <a target="_blank" href="https://www.facebook.com/photo?fbid=914143597178102&set=pcb.914143610511434">
+                                      <img src="css/imgale/anuncio2.jpg" alt="anuncios" width="600" height="400">
+                                    </a>
+                                    <div class="desc">Taller de videojuegos</div>
+                                </div>
+                                <div class="gallery">
+                                    <a target="_blank" href="https://www.facebook.com/photo?fbid=920181339907661&set=a.520804703178662">
+                                      <img src="css/imgale/anuncio3.jpg" alt="anuncios" width="600" height="400">
+                                    </a>
+                                    <div class="desc">Certificación disponible</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </article>
 
         <footer>
             <p>[185085@upslp.edu.mx] [183382@upslp.edu.mx]</p>

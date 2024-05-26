@@ -1,31 +1,46 @@
-const logo = document.getElementById("logo");//guardamos el id del logo en la variable
-const barraLateral = document.querySelector(".contenido_menu");//devuelve el primer contenido del documento o div
-const spans = document.querySelectorAll("span");//obtener todo elemento span
-const menu = document.querySelector(".menu");
-const main = document.querySelector("main");
+//-----------------------------------------------------------------------------------------------------
 
-menu.addEventListener("click",()=>{
-    barraLateral.classList.toggle("max-barra-lateral");
-    if(barraLateral.classList.contains("max-barra-lateral")){//validamos si se tiene activada la clase de max barra lateral
-        menu.children[0].style.display = "none"; //ocultamos el primer icono
-        menu.children[1].style.display = "block"; //mostramos el segundo icono
-    }else{
-        menu.children[0].style.display = "block";
-        menu.children[1].style.display = "none";
-    }
-    if(window.innerWidth<=320){//revisamos el tamaño de la pantalla
-        barraLateral.classList.add("mini-barra-lateral");//añadimos una clase
-        main.classList.add("min-main");
-        spans.forEach((span)=>{
-            span.classList.toggle("predido");
-        });
-    }
-});
+/*Carrusel de imagenes*/
 
-logo.addEventListener("click",()=>{//Al presionar el icono hara las siguientes acciones
-    barraLateral.classList.toggle("mini-barra-lateral");//agrega o quita la clase del css
-    main.classList.toggle("min-main");
-    spans.forEach((span)=>{//De esta manera recorremos todos los span y agregamos o quitamos la clase oculto
-        span.classList.toggle("oculto");
-    });
+document.addEventListener("DOMContentLoaded", function() {
+    const botonIzq = document.querySelector(".bl");
+    const botonDer = document.querySelector(".br");
+    const slideer = document.querySelector("#slider1");
+    const sliderSection = document.querySelectorAll(".slider");
+
+    let op = 0;
+    let counter = 0;
+
+    // Event listeners for buttons
+    botonIzq.addEventListener("click", moverIzq);
+    botonDer.addEventListener("click", moverDer);
+
+    // Automatic slide every 5 seconds
+    setInterval(moverDer, 5000);
+
+    // Function to move the slider to the right
+    function moverDer() {
+        if (counter >= sliderSection.length - 1) {
+            op = 0;
+            counter = 0;
+        } else {
+            counter++;
+            op += 100 / sliderSection.length;
+        }
+        slideer.style.transform = `translateX(-${op}%)`;
+        slideer.style.transition = "transform 0.6s ease";
+    }
+
+    // Function to move the slider to the left
+    function moverIzq() {
+        if (counter <= 0) {
+            counter = sliderSection.length - 1;
+            op = 100 - (100 / sliderSection.length);
+        } else {
+            counter--;
+            op -= 100 / sliderSection.length;
+        }
+        slideer.style.transform = `translateX(-${op}%)`;
+        slideer.style.transition = "transform 0.6s ease";
+    }
 });

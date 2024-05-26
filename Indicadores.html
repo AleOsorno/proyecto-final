@@ -7,89 +7,94 @@
     <link rel="stylesheet" href="css/estilos.css">
 </head>
 <body>
-    
     <header>
-        <div class="menu">
-            <ion-icon name="menu-outline"></ion-icon>
-            <ion-icon name="close-circle-outline"></ion-icon>
-        </div>
         <div class="contenido_menu">
-            <div>
-                <div class="nombre_pagina"><!--Aquí ira el ícono y nombre, por lo que todavia no usare una etiqueta nav-->
-                    <img id="logo" src="css/LOGO ATIT.jpg">
-                    <span>Academia de ATIT</span> <!--Nombre de la pagina-->
-                </div>
+            <div class="menu">
+                <nav>
+                    <ul>
+                        <li>
+                            <a href="index.html">
+                            <!--<ion-icon class="inicios" name="aperture-outline"></ion-icon>-->
+                            <img class="inicios" src="css/imgale/LOGO ATIT.jpg">
+                            </a>
+                        </li>
+                        <li>
+                            <a class="posicion" href="#">
+                                <ion-icon name="book-outline"></ion-icon>
+                                <span>Carreras</span>
+                            </a>
+                            <ul>
+                                <li><a href="ITI.html">Ing. Tecnologías de la Información</a></li>
+                                <li><a href="ITEM.html">Ing. Telemática</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a class="posicion" href="Personal.html">
+                                <ion-icon name="person-outline"></ion-icon>
+                                <span>Personal</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="posicion" href="Residencias.html">
+                                <ion-icon name="mail-unread-outline"></ion-icon>
+                                <span>Residencias</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="posicion" href="Proyectos.html">
+                                <ion-icon name="location-outline"></ion-icon>
+                                <span>Proyectos</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="posicion" href="Videos.html">
+                                <ion-icon name="stop-circle-outline"></ion-icon>
+                                <span>Videos</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a id="inicio" class="posicion" href="#">
+                                <ion-icon name="checkmark-outline"></ion-icon>
+                                <span>Indicadores</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="posicion" href="#">
+                                <ion-icon name="easel-outline"></ion-icon>
+                                <span>Interacción</span>
+                            </a>
+                            <ul>
+                                <li><a href="Blog.html">Blog</a></li>
+                                <li><a href="Contacto.html">Contacto</a></li>
+                                <li><a href="Cuestionario.html">Cuestionario</a></li>
+                                <li><a href="Chat.html">Chat</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a class="posicion" href="Galeria.html">
+                                <ion-icon name="save-outline"></ion-icon>
+                                <span>Galería</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="posicion" href="#">
+                                <ion-icon name="construct-outline"></ion-icon>
+                                <span>Ayuda</span>
+                            </a>
+                            <ul>
+                                <li><a href="Preguntas.html">Preguntas</a></li>
+                                <li><a href="Grupos.html">Grupos</a></li>
+                                <li><a href="Redes.html">Redes</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
             </div>
-            <nav class="navegacion">
-                <ul>
-                    <li>
-                        <a href="index.html">
-                            <ion-icon name="aperture-outline"></ion-icon>
-                            <span>Inicio</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="Carreras.html">
-                            <ion-icon name="book-outline"></ion-icon>
-                            <span>Carreras</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="Personal.html">
-                            <ion-icon name="person-outline"></ion-icon>
-                            <span>Personal</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="Residencias.html">
-                            <ion-icon name="mail-unread-outline"></ion-icon>
-                            <span>Residencias</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="Proyectos.html">
-                            <ion-icon name="location-outline"></ion-icon>
-                            <span>Proyectos</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="Videos.html">
-                            <ion-icon name="stop-circle-outline"></ion-icon>
-                            <span>Videos</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a id="inicio" href="#">
-                            <ion-icon name="checkmark-outline"></ion-icon>
-                            <span>Indicadores</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="Interaccion.html">
-                            <ion-icon name="easel-outline"></ion-icon>
-                            <span>Interacción</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="Galeria.html">
-                            <ion-icon name="save-outline"></ion-icon>
-                            <span>Galería</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="Ayuda.html">
-                            <ion-icon name="construct-outline"></ion-icon>
-                            <span>Ayuda</span>
-                        </a>
-                    </li>
-                </ul>
-            </nav>
-            <hr>
         </div>
     </header>
 
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-    <script src="/java/pag.js"></script>
+    <script src="/java/script.js"></script>
 </body>
 </html>
