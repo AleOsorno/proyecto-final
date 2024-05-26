@@ -362,11 +362,11 @@ section.s1{
 }
 
 .set .set2 .separador2 .texto hr{
-    background-color: rgb(0, 140, 255);
+    background-color: rgb(0, 102, 185);
     height: 15px;
     width: 40%;
     border-radius: 15px;
-    border: 2px solid rgb(0, 140, 255);
+    border: 2px solid rgb(0, 102, 185);
     margin: 0px 260px;
 }
 
