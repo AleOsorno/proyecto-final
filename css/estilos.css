@@ -480,7 +480,11 @@ footer{
 /*COMIENZO DE LA PAGINA DE TECNOLOGIAS DE LA INFORMACIÓN*/
 
 .Iti{
-    background-color: #e7e7e7;
+    background-color: #0685c0;
+}
+
+.Item{
+    background-color: #0685c0;
 }
 
 article .portada img{
@@ -513,7 +517,7 @@ article .portada img{
 }
 
 .acordeon .h2:hover{
-    background-color: #f5a30a;
+    background-color: #5c1ecf;
     border-radius: 15px;
     padding: 20px 0px;
     font-family: "Lilita One", sans-serif;
