@@ -2,6 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Lilita+One&display=swap');/*Lilita one*/
 @import url('https://fonts.googleapis.com/css2?family=Patua+One&display=swap');/*Patua One*/
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');/*roboto mono*/
+@import url('https://fonts.googleapis.com/css2?family=Concert+One&display=swap');/*concert one*/
 
 :root{/*creación de variables para distintos colores de la página*/
     --color-menu-hover: rgb(238,238,238);
@@ -538,10 +539,24 @@ article .portada img{
     transition: all 0.5s ease;
 }
 
+.acordeon .contenedorplan{
+    background-color: #ffffff;
+    border-radius: 0px 0px 15px 15px;
+    color: rgb(0, 0, 0);
+    font-family: "Roboto Mono", monospace;
+    font-optical-sizing: auto;
+    font-weight: bold;
+    font-style: normal;
+    text-align: center;
+    padding: 0px;
+    height: 0px;
+    overflow: hidden;
+    transition: all 0.5s ease;
+}
+
 .acordeon .imgcon2{
     height: 300px;
     padding: 0px;
-    height: 0px;
     overflow: hidden;
     transition: all 0.5s ease;
 }
@@ -562,4 +577,60 @@ article .portada img{
 
 .acordeon .bloque.activo .contenedor ol li{
     padding: 15px 100px;
+}
+
+.acordeon .bloque.activo .contenedor ul{
+    margin: 0px 90px;
+}
+
+.acordeon .bloque.activo .contenedor ul li{
+    padding: 15px 70px;
+}
+
+.acordeon .imgcon3{
+    height: 300px;
+    padding: 0px;
+    height: 0px;
+    overflow: hidden;
+    transition: all 0.5s ease;
+}
+
+.acordeon .bloque.activo .contenedorplan{
+    padding: 30px;
+    height: 800px;
+}
+
+.acordeon .bloque.activo .imgcon3{
+    padding: 30px;
+    height: 100%;
+    width: 100%;
+}
+
+.acordeon .bloque.activo .contenedor h3{
+    padding: 8px;
+    text-align: center;
+    font-family: "Concert One", sans-serif;
+    font-weight: 400;
+    font-size: 26px;
+    font-style: normal;
+}
+
+.acordeon .bloque.activo .contenedor a:link{
+    color: #f5a30a;
+}
+
+.acordeon .bloque.activo .contenedor a:visited{
+    color: #f5a30a;
+}
+
+.acordeon .imgcon4{
+    height: 400px;
+    padding: 0px;
+    overflow: hidden;
+    transition: all 0.5s ease;
+}
+
+.acordeon .bloque.activo .imgcon4{
+    padding: 30px;
+    height: 400px;
 }
