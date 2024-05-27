@@ -2,7 +2,6 @@
 
 /*Carrusel de imagenes*/
 
-document.addEventListener("DOMContentLoaded", function() {
     const botonIzq = document.querySelector(".bl");
     const botonDer = document.querySelector(".br");
     const slideer = document.querySelector("#slider1");
@@ -43,4 +42,8 @@ document.addEventListener("DOMContentLoaded", function() {
         slideer.style.transform = `translateX(-${op}%)`;
         slideer.style.transition = "transform 0.6s ease";
     }
-});
+
+    /*Pagina de ITI*/
+
+const bloque = document.querySelectorAll('.bloque');
+const h2 = document.querySelectorAll('.h2');
