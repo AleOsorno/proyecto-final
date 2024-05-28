@@ -42,8 +42,3 @@
         slideer.style.transform = `translateX(-${op}%)`;
         slideer.style.transition = "transform 0.6s ease";
     }
-
-    /*Pagina de ITI*/
-
-const bloque = document.querySelectorAll('.bloque');
-const h2 = document.querySelectorAll('.h2');
