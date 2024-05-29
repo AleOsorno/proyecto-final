@@ -36,7 +36,7 @@
     object-fit: cover;/*que las imagenes no pierdan su calidad*/
 }
 
-.bl,.br{
+.bl,.br{/*botones del carrusel*/
     display: flex;
     position: absolute;
     top: 50%;
