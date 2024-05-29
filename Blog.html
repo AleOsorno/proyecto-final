@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blog</title>
     <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
     <header>
@@ -93,8 +94,24 @@
         </div>
     </header>
 
+    <article>
+        <div class="portada">
+            <img src="css/imgale/PortadaBlog.png" alt="ITI">
+        </div>
+        <div class="container">
+            <h1>Mi Blog</h1>
+            <div id="blog-posts"></div>
+            <form id="post-form">
+                <input type="text" id="title" placeholder="Título" required>
+                <textarea id="content" placeholder="Contenido" required></textarea>
+                <button type="submit">Agregar Publicación</button>
+            </form>
+        </div>
+    </article>
+
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
     <script src="/java/script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
