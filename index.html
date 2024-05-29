@@ -204,14 +204,14 @@
                 let op = 0;
                 let counter = 0;
 
-                // Event listeners for buttons
+                // botones
                 botonIzq.addEventListener("click", moverIzq);
                 botonDer.addEventListener("click", moverDer);
 
-                // Automatic slide every 5 seconds
+                // cambiar imagen cada 5s
                 setInterval(moverDer, 5000);
 
-                // Function to move the slider to the right
+                // Mover la imagen a la derecha
                 function moverDer() {
                     if (counter >= sliderSection.length - 1) {
                         op = 0;
@@ -224,7 +224,7 @@
                     slideer.style.transition = "transform 0.6s ease";
                 }
 
-                // Function to move the slider to the left
+                // Mover la imagen a la izquierda
                 function moverIzq() {
                     if (counter <= 0) {
                         counter = sliderSection.length - 1;
