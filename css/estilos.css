@@ -3,6 +3,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Patua+One&display=swap');/*Patua One*/
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');/*roboto mono*/
 @import url('https://fonts.googleapis.com/css2?family=Concert+One&display=swap');/*concert one*/
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');/*Playfair Display*/
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap');/*Lora*/
 
 :root{/*creación de variables para distintos colores de la página*/
     --color-menu-hover: rgb(238,238,238);
@@ -46,7 +48,7 @@ body{
     }
 
     nav a.posicion{
-        margin: 20px 13.72px;
+        margin: 20px 14.72px;/*posicion del nav*/
     }
 
     nav a.posicion span{
@@ -295,7 +297,7 @@ section.s1{
 }
 
 .set .set2 .separador .texto h1{
-    padding-top: 70px;
+    padding: 2% 5%;
     text-align: center;
     font-size: 80px;
     font-family: "Lilita One", sans-serif;
@@ -382,7 +384,7 @@ section.s1{
 }
 
 .extra .set2 .separador3 .texto h1{
-    padding-top: 70px;
+    padding: 2% 0%;
     text-align: center;
     font-size: 50px;
     font-family: "Lilita One", sans-serif;
@@ -403,7 +405,7 @@ section.s1{
 .extra .set2 .separador3 .texto ion-icon{
     font-size: 80px;
     margin-top: 50px;
-    margin-left: 260px;
+    margin-left: 16%;
     border-radius: 15px;
     padding: 3px;
     transition: all 0.5s;
@@ -415,12 +417,13 @@ section.s1{
 }
 
 .separador4{
-    height: 50%;
+    height: 60%;
     background-color: rgb(64, 87, 94);
+    padding-top: 2%;
 }
 
 .extra .set2 .separador4 .texto h1{
-    padding-top: 70px;
+    padding: 2% 0%;
     text-align: center;
     font-size: 50px;
     font-family: "Lilita One", sans-serif;
@@ -441,7 +444,7 @@ section.s1{
     float: left;
     width: 180px;
     box-shadow: 0 0 10px 5px rgb(0, 0, 0);
-    margin-left: 290px;
+    margin-left: 18%;
     border-radius: 15px;
     transition: all 0.5s;
   }
@@ -480,16 +483,16 @@ footer{
 /*COMIENZO DE LA PAGINA DE TECNOLOGIAS DE LA INFORMACIÓN e ITEM*/
 
 .Iti{
-    background-color: #0685c0;
+    background-color: #82a1af;
 }
 
 .Item{
-    background-color: #a106c0;
+    background-color: #73b094;
 }
 
 article .portada img{
     width: 100%;
-    height: 600px;
+    height: 650px;
 }
 
 .acordeon{
@@ -558,11 +561,71 @@ article .portada img{
     transition: all 0.5s ease;
 }
 
-.acordeon .imgcon2{
+.acordeon .contenedor .imgcon2{
     height: 300px;
-    padding: 0px;
+    margin-right: 18%;
     overflow: hidden;
     transition: all 0.5s ease;
+}
+
+@media (max-width: 1700px) {
+    .acordeon .contenedor .imgcon2{
+        height: 300px;
+        margin-right: 4%;
+        overflow: hidden;
+        transition: all 0.5s ease;
+    }
+}
+
+.acordeon .contenedor .imgconitem{
+    height: 400px;
+    margin-right: 8%;
+    overflow: hidden;
+    transition: all 0.5s ease;
+}
+
+
+@media (max-width: 1700px) {
+    .acordeon .contenedor .imgconitem{
+        height: 400px;
+        margin-right: 4%;
+        overflow: hidden;
+        transition: all 0.5s ease;
+    }
+}
+
+.acordeon .contenedor .imgconitem2{
+    height: 400px;
+    margin-right: 15%;
+    overflow: hidden;
+    transition: all 0.5s ease;
+}
+
+
+@media (max-width: 1700px) {
+    .acordeon .contenedor .imgconitem2{
+        height: 400px;
+        margin-right: 6%;
+        overflow: hidden;
+        transition: all 0.5s ease;
+    }
+}
+
+.acordeon .contenedor .imgconitem3{
+    height: 400px;
+    margin-right: 2%;
+    overflow: hidden;
+    transition: all 0.5s ease;
+}
+
+
+@media (max-width: 1700px) {
+    .acordeon .contenedor .imgconitem3{
+        height: 400px;
+        margin-right: 6%;
+        overflow: hidden;
+        transition: all 0.5s ease;
+    }
 }
 
 .acordeon .bloque.activo .contenedor{
@@ -914,10 +977,122 @@ h1{
     font-family: "Space Mono", monospace;
     font-weight: 700;
     font-style: normal;
-    height: 70px;
+    height: 30%;
     width: 100%;
     color: white;
     text-align: center;
     padding: 23px;
     font-size: 14px;
+}
+
+
+
+/*Estilo de la pagina de residencias*/
+
+article .rescon1{
+    width: 100%;
+    height: 500px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+
+article .rescon1 .conTituloRes{
+    background-color: white;
+    text-align: center;
+    color: black;
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    padding: 60px 172px 200px 38px; 
+}
+
+article .rescon1 p{
+    text-align: left;
+    margin-top: 7%;
+    margin-right: 8%;
+    margin-left: 8%;
+    color: black;
+    font-family: "Lora", serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 18px;
+    line-height: 2;
+}
+
+article .residenciaimg img{
+    width: 100%;
+    height: 600px;
+}
+
+article .rescon1 .conTituloRes2{
+    background-color: white;
+    text-align: center;
+    color: black;
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    padding: 140px 132px 200px 38px; 
+}
+
+article .rescon1 ul{
+    padding: 30px 180px 100px 150px;
+    list-style: none;
+}
+
+article .rescon1 ul li{
+    padding: 23px;
+}
+
+article .rescon1 ul li a{
+    text-decoration: none;
+    font-family: "Lora", serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    color: black;
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+article .rescon2 .conTituloRes3{
+    background-color: white;
+    text-align: center;
+    color: black;
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    padding: 15% 172px 200px 50px;
+}
+
+article .rescon2{
+    width: 100%;
+    height: 30%;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+
+article .rescon2 ul{
+    padding: 30px 180px 3% 150px;
+    list-style: none;
+}
+
+article .rescon2 ul li{
+    padding: 23px;
+}
+
+article .rescon2 ul li a{
+    text-decoration: none;
+    font-family: "Lora", serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    color: black;
+    font-size: 16px;
+    line-height: 1.7;
 }
