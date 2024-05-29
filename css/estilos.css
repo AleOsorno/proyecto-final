@@ -725,7 +725,7 @@ article .portada img{
     box-sizing: border-box;
 }
 
-h1{
+.tituloPersonal{
     margin: 40px;
     text-align: center;
     font-family: "Lilita One", sans-serif;
@@ -998,6 +998,8 @@ article .rescon1{
 }
 
 article .rescon1 .conTituloRes{
+    font-size: 60px;
+    font-style: normal;
     background-color: white;
     text-align: center;
     color: black;
@@ -1005,7 +1007,7 @@ article .rescon1 .conTituloRes{
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
-    padding: 60px 172px 200px 38px; 
+    padding: 100px 172px 200px 38px; 
 }
 
 article .rescon1 p{
@@ -1028,6 +1030,8 @@ article .residenciaimg img{
 }
 
 article .rescon1 .conTituloRes2{
+    font-size: 60px;
+    font-style: normal;
     background-color: white;
     text-align: center;
     color: black;
@@ -1059,6 +1063,8 @@ article .rescon1 ul li a{
 }
 
 article .rescon2 .conTituloRes3{
+    font-size: 60px;
+    font-style: normal;
     background-color: white;
     text-align: center;
     color: black;
@@ -1095,4 +1101,98 @@ article .rescon2 ul li a{
     color: black;
     font-size: 16px;
     line-height: 1.7;
+}
+
+
+
+
+
+/*Página de Proyectos*/
+
+.portada2 img{
+    width: 100%;
+    height: 650px;
+}
+
+section.s2{
+    background-color: rgb(255, 199, 16);
+    font-family: "Space Mono", monospace;
+    font-weight: 700;
+    font-style: normal;
+    height: 70px;
+    width: 100%;
+    color: black;
+    text-align: center;
+    padding-top: 23px;
+    font-size: 18px;
+}
+
+.Proyecto{
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    align-items: center;
+    background: whitesmoke;
+}
+
+.contProy{
+    display: flex;
+}
+
+.cardProy{
+    height: 500px;
+    margin: 50px;
+    box-shadow: 5px 5px 20px black;
+    overflow: hidden;
+}
+
+.imgProy{
+    height: 500px;
+    width: 350px;
+    border-radius: 3px;
+    transition: .5s ease;
+    border-radius: 15px 15px 0px 0px;
+}
+
+.introProy{
+    height: 70px;
+    width: 350px;
+    padding: 6px;
+    box-sizing: border-box;
+    position: absolute;
+    bottom: -500px;
+    background: rgb(0, 0, 0);
+    color: white;
+    transition: .5s ease;
+    border-radius: 0px 0px 15px 15px;
+}
+
+.Proyecto .contProy .cardProy .introProy .tituloProy{
+    margin: 10px;
+    font-size: 40px;
+}
+
+.parrafoProy{
+    font-size: 20px;
+    margin: 20px;
+    opacity: 0;
+}
+
+.cardProy:hover{
+    cursor: pointer;
+}
+
+.cardProy:hover .introProy{
+    height: 220px;
+    bottom: -600px;
+    background-color: black;
+}
+
+.cardProy .parrafoProy{
+    opacity: 1;
+    visibility: visible;
+}
+
+.cardProy:hover img{
+    transform: scale(1.1) rotate(-3deg);
 }
