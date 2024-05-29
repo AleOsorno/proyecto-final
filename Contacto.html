@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contacto</title>
     <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="css/Contacto.css">
 </head>
 <body>
     <header>
@@ -93,8 +94,96 @@
         </div>
     </header>
 
+    <article>
+        <div class="portada">
+            <img src="css/imgale/PortadaContacto.png" alt="ITI">
+        </div>
+        <div class="infoextra">
+            <h2>Hola, bienvenido a la sección de Interacción (Contacto). El proposito de esta subpágina es que puedas agendar una cita con el personal administrativo de la academia. Para hacer esto, necesitamos que llenes los siguientes campos:</h2>
+        </div>
+    </article>
+
+    <main>
+        <section class="contenido_seccion">
+            <form id="cuestionarioForm">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required>
+
+                <label for="hora">Hora de visita (8 - 12):</label>
+                <input type="text" id="hora" name="hora" required>
+
+                <label for="dia">¿Qué día de la semana deseas visitar a la Academia?</label>
+                <textarea id="dia" name="dia" rows="1" required></textarea>
+
+                <label for="mision">Describe la razón por la que quieres ir:</label>
+                <textarea id="mision" name="mision" rows="2" required></textarea>
+
+                <label for="lider">¿Con qué líder deseas acudir?</label>
+                <select name="opciones">
+                    <option value="1">Cabrera Rico Juan Antonio</option>
+                    <option value="2">Fernández Mireles Víctor Manuel</option>
+                    <option value="3">Gámez Zavala Liliana</option>
+                    <option value="4">Llamas Contreras Rafael</option>
+                    <option value="5">Montaño Rivas Omar</option>
+                    <option value="6">Ordaz Salazar Francisco Cruz</option>
+                </select>
+                <button type="submit">Generar PDF</button>
+            </form>
+        </section>
+    </main>
+
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-    <script src="/java/script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.3.1/jspdf.umd.min.js"></script>
+    <script>
+        document.getElementById('cuestionarioForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            const { jsPDF } = window.jspdf;
+            const doc = new jsPDF();
+            const nombre = document.getElementById('nombre').value;
+            const hora = document.getElementById('hora').value;
+            const dia = document.getElementById('dia').value;
+            const mision = document.getElementById('mision').value;
+            var opc= parseInt(document.forms[0].opciones.value);
+            let palabra= '';
+
+            if(opc==1){
+                palabra = 'Cabrera Rico Juan Antonio';
+            }
+
+            if(opc==2){
+                palabra = 'Fernández Mireles Víctor Manuel';
+            }
+
+            if(opc==3){
+                palabra = 'Gamez Zavala Liliana';
+            }
+
+            if(opc==4){
+                palabra = 'Llamas Contreras Rafael';
+            }
+
+            if(opc==5){
+                palabra = 'Montaño Rivas Omar';
+            }
+
+            if(opc==6){
+                palabra = 'Ordaz Salazar Francisco Cruz';
+            }
+
+            doc.text('Cita para la academia de ATIT', 20, 20);
+            doc.text(`Nombre: ${nombre}`, 20, 30);
+            doc.text('Hora y día agendada:', 20, 40);
+            doc.text(`Hora: ${hora}`, 20, 50);
+            doc.text(dia, 20, 60);
+            doc.text('Razón:', 20, 80);
+            doc.text(mision, 20, 90);
+            doc.text('Líder:', 20, 110);
+            doc.text(palabra, 20, 120);
+
+            doc.save('cuestionario_diagnostico.pdf');
+        });
+    </script>
 </body>
 </html>
